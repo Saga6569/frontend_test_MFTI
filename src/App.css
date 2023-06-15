@@ -1,0 +1,48 @@
+select {
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.select_graphs {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.get_graphs {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.contener {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.box {
+  border: solid;
+  width: 100px;
+  text-align: center;
+  height: 50px;
+  position: absolute;
+  -webkit-user-drag: element;
+  cursor: grab;
+}
+
+.zone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10px;
+  z-index: -1;
+}
+
+p {
+  user-select: none;
+}

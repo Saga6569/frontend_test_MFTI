@@ -181,13 +181,14 @@ const App = () => {
           let top = 150;
 
           getStartNodes().map((id) => {
-            const node: INodes = newMaket.filter((el) => el.id === id)[0]
+            const node: INodes[] = newMaket.filter((el) => el.id === id);
             const left = 800;
-            node.myStyle = { left, top };
-            node.color = randomColor();
-            iter(node, 0);
+            node[0].myStyle = { left, top };
+            node[0].color = randomColor();
+            iter(node[0], 0);
             top += 100;
           });
+
           setState({ ...state, edges: response.edges, initMaket: initMaket, newMaket: newMaket });
           setCount(targetId);
         }}
